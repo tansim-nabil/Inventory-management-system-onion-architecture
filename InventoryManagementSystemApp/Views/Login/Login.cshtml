@@ -1,0 +1,47 @@
+﻿@model InventoryManagementSystemDomain.Entity.Login
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body id="login-body">
+    <header></header>
+    <div class="container">
+    <div class="row">
+        <div class="col-4 offset-4">
+            <div class="text-center mt-5">
+                <h1 class="text-dark">User Login Portal</h1>
+            </div>
+            <form method="post" asp-action="Login" class="shadow p-3 mt-5 mb-5 bg-body-tertiary rounded-4 pe-5 ps-5 pb-5">
+                <h6 class="text-center text-success">@TempData["successMessage"]</h6>
+                
+                <div class="form-group">
+                    <label asp-for="Name">Username</label>
+                <input type="text" asp-for="Name" placeholder="Enter Username" class="form-control" autocomplete="off" />
+                
+                <span asp-validation-for="Name" class="text-danger">@TempData["errorUsername"]</span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                <input type="password" asp-for="Password" placeholder="Enter Password" class="form-control" autocomplete="off" />
+                
+                <span asp-validation-for="Password" class="text-danger">@TempData["errorPassword"]</span>
+                </div>
+                <br> 
+                <div class="form-group d-grid gap-2">
+                    <input type="submit" class="btn btn-primary btnalign-content-lg-around mb-1" value="Log in" />
+                </div>
+                <div class="text-center">
+                    <a class="text-primary" asp-action="ForgotPassword">Forgot Password?</a>
+                </div>
+                <div class="text-center">
+                    <a class="text-light btn btn-success font-weight-bold" asp-action="SignUp" asp-controller="Account">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+

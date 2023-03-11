@@ -16,3 +16,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#login-body header{
+    display:none;
+}

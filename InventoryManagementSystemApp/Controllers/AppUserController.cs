@@ -1,9 +1,11 @@
 ﻿using InventoryManagementSystemDomain.Entity;
 using InventoryManagementSystemInfrastructure.IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagementSystemApp.Controllers
 {
+    [Authorize]
     public class AppUserController : Controller
     {
         private readonly IUserService _user;

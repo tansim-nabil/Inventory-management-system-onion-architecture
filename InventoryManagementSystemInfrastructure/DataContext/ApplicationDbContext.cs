@@ -10,5 +10,8 @@ namespace InventoryManagementSystemInfrastructure.DataContext
 
         }
         public DbSet<AppUser> AppUsers { get; set; }
+
+        public DbSet<Login> LoginUsers { get; set; }
+        public DbSet<Registration> Registrations { get; set; }
     }
 }

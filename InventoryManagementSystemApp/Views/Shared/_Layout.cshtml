@@ -26,6 +26,13 @@
                             <a class="nav-link text-dark"  asp-controller="AppUser" asp-action="Index">App User List</a>
                         </li>
                     </ul>
+                    @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="navbar float-end">
+                        <span>Welcome &nbsp;</span> <span class="text-success fw-bolder">@User.Identity.Name &nbsp;</span><a class="btn btn-sm btn-danger" asp-action="Logout" asp-controller="Login">Logout</a>
+                    </div>
+
+                }
                 </div>
             </div>
         </nav>

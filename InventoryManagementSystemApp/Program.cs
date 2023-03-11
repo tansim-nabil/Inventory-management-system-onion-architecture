@@ -1,6 +1,7 @@
 using InventoryManagementSystemInfrastructure.DataContext;
 using InventoryManagementSystemInfrastructure.IService;
 using InventoryManagementSystemInfrastructure.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,20 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option =>
+    {
+        option.ExpireTimeSpan = TimeSpan.FromMinutes(60 * 1);
+        option.LoginPath = "/Login";
+        option.AccessDeniedPath = "/Home";
+    });
+builder.Services.AddSession(option =>
+{
+    option.IdleTimeout = TimeSpan.FromMinutes(5);
+    option.Cookie.HttpOnly = true;
+    option.Cookie.IsEssential = true;
+});
 
 #region Dependency Injection
 builder.Services.AddScoped<IUserService, UserService>();
@@ -31,11 +46,12 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();
