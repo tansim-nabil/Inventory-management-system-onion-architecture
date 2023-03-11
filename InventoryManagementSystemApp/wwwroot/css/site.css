@@ -8,6 +8,10 @@ html {
   }
 }
 
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
 html {
   position: relative;
   min-height: 100%;
@@ -15,8 +19,46 @@ html {
 
 body {
   margin-bottom: 60px;
+  /*background: url(/Images/bg-home.png) no-repeat;
+  background-position: center;*/
+}
+#home-body{
+    background: url(/Images/bg-home.png) no-repeat;
+    background-position: center;
+}
+#login-body {
+    background: url(/Images/bg-login.jpg) no-repeat;
+    background-position: center;
+}
+#students-body {
+    background: url(/Images/create-bg.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#create-body {
+    background: url(/Images/create-bg.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+#update-body {
+    background: url(/Images/update-bg.png) no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
-#login-body header{
-    display:none;
+.dashboard{
+    margin-top: 150px;
+}
+.dbutton{
+    opacity: 85%;
+}
+.nav-bg {
+    background-image: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
+    /* background-image: linear-gradient(to bottom right, #ee9ca7, #ffdde1);*/
+    /*background-image: linear-gradient(to bottom right, #de6262, #ffb88c);*/
+}
+.table-bg {
+    /*background-color: lightgray;*/
+    /*background-image: linear-gradient(to bottom right, #ee9ca7, #ffdde1);*/
+    background-image: linear-gradient(to bottom right, #ffafbd, #ffc3a0);
 }

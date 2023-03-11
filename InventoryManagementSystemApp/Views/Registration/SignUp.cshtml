@@ -1,0 +1,70 @@
+﻿@model InventoryManagementSystemDomain.Entity.Registration
+@{
+    ViewData["Title"] = "SignUp";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+@*<body id="login-body">
+    <header></header>*@
+    <div class="container">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="text-center">
+                <h1 class="text-dark">User Registration Form</h1>
+            </div>
+            <form method="post" asp-action="SignUp" class="shadow p-3 mb-5 bg-body-tertiary rounded-4 pe-5 ps-5 pb-5 mt-5">
+                <div class="form-group">
+                    <label asp-for="FirstName">First name</label>
+                <input type="text" asp-for="FirstName" placeholder="Enter First name" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="LastName">Last name</label>
+                <input type="text" asp-for="LastName" placeholder="Enter Last name" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="UserName">Username</label>
+                <input type="text" asp-for="UserName" placeholder="Enter Username" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                <input type="text" asp-for="Email" placeholder="Enter Email" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label asp-for="Phone">Phone number</label>
+                <input type="number" asp-for="Phone" placeholder="Enter Phone Number" class="form-control" autocomplete="off" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="form-group col-6">
+                        <label asp-for="Password"></label>
+                        <input type="password" asp-for="Password" placeholder="Enter Password" class="form-control" autocomplete="off" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                <br>
+                    <div class="form-group col-6">
+                        <label asp-for="ConfirmPassword">Confirm password</label>
+                        <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" class="form-control" autocomplete="off" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-success btnalign-content-lg-around mb-1 float-end" value="Register" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@*</body>*@
+
+
+

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace InventoryManagementSystemDomain.Entity
 {
     public class Registration
     {
+        [Key]
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -15,5 +17,6 @@ namespace InventoryManagementSystemDomain.Entity
         public string Phone { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }
