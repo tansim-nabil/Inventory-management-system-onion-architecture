@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystemInfrastructure.Service
 {
-    internal class RegistrationService : BaseService<Login>, IRegistrationService
+    internal class RegistrationService : BaseService<Registration>, IRegistrationService
     {
         private readonly ApplicationDbContext dbContext;
         public RegistrationService(ApplicationDbContext dbContext) : base(dbContext)

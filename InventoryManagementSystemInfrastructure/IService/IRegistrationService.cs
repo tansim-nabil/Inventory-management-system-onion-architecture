@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystemInfrastructure.IService
 {
-    public interface IRegistrationService : IBaseService<Login>
+    public interface IRegistrationService : IBaseService<Registration>
     {
        
     }

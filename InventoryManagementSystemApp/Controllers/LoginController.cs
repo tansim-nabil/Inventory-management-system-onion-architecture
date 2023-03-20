@@ -45,7 +45,7 @@ namespace InventoryManagementSystemApp.Controllers
                         var principal = new ClaimsPrincipal(identity);
                         HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
                         HttpContext.Session.SetString("Username", model.Name);
-                        return RedirectToAction("Index", "AppUser");
+                        return RedirectToAction("Index", "Home");
                     }
                     else
                     {

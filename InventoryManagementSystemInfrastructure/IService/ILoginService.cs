@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystemInfrastructure.IService
 {
-    public interface ILoginService : IBaseService<AppUser>
+    public interface ILoginService : IBaseService<Login>
     {
         
     }

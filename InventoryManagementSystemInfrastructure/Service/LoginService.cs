@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystemInfrastructure.Service
 {
-    public class LoginService: BaseService<AppUser>, ILoginService
+    public class LoginService: BaseService<Login>, ILoginService
     {
         private readonly ApplicationDbContext dbContext;
 

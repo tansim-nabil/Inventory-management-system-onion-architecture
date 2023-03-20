@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace InventoryManagementSystemDomain.Entity
 {
-    public class Login : Registration
+    public class Login
     {
         public Login() { }
-        [Key]
+  
         public int Id { get; set; }
         public string Name { get; set; }
         public string Password { get; set; }
